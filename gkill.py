@@ -1,3 +1,4 @@
+#patched by Tsu
 import math
 import os
 import time
@@ -5,7 +6,7 @@ import psutil as psutil
 while True:
     try:
         os.system("cls")
-        print("----------------------------------------------------------------")
+        print("_____________________________________________________")
         for pid in psutil.process_iter():
            if(pid.name() == "RobloxPlayerBeta.exe"):
                print(str(pid.pid)+" mem:"+str(math.trunc(psutil.Process(pid.pid).memory_info().rss / 1024 / 1024))+"M Status:"+psutil.Process(pid.pid).status())
